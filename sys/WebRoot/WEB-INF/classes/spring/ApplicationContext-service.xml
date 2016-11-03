@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="userService" class="com.flf.service.impl.UserServiceImpl">
+		<property name="userMapper" ref="userMapper"/>
+	</bean>
+	<bean id="roleService" class="com.flf.service.impl.RoleServiceImpl">
+		<property name="roleMapper" ref="roleMapper"/>
+	</bean>
+	<bean id="menuService" class="com.flf.service.impl.MenuServiceImpl">
+		<property name="menuMapper" ref="menuMapper"/>
+	</bean>
+	<bean id="infoService" class="com.flf.service.impl.InfoServiceImpl">
+		<property name="infoMapper" ref="infoMapper"/>
+	</bean>
+	<bean id="userRoleService" class="com.flf.service.impl.UserRoleServiceImpl">
+		<property name="userRoleMapper" ref="userRoleMapper"/>
+	</bean>
+	<bean id="roleMenuService" class="com.flf.service.impl.RoleMenuServiceImpl">
+		<property name="roleMenuMapper" ref="roleMenuMapper"/>
+	</bean>
+</beans>

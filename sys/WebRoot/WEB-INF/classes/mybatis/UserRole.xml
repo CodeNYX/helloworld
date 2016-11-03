@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.flf.mapper.UserRoleMapper">
+
+
+	<select id="listAllRolesByUserId" resultType="com.flf.entity.UserRole" parameterType="int">
+		 select * from tb_userrole where userid = #{userid}
+	</select>
+	
+	<insert id="insertUserRole" parameterType="com.flf.entity.UserRole">
+		insert tb_userrole (userid,roleid) values (#{userid},#{roleid})
+	</insert>
+	
+	<delete id="deleteUserRoleByUserId" parameterType="int">
+		delete from tb_userrole where userid=#{userid}
+	</delete>
+</mapper>
